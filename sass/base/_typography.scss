@@ -1,0 +1,37 @@
+@use "../abstracts/functions" as *;
+
+body {
+  font-family: var(--ff-body);
+  font-size: rem(14);
+}
+
+.card-data {
+  padding: rem(33);
+  text-align: center;
+  .light {
+    color: var(--pale-blue);
+    font-weight: var(--fw-bold);
+  }
+  .main-title {
+    color: var(--pale-blue);
+    font-weight: var(--fw-regular);
+    font-size: inherit;
+  }
+}
+
+.card-data {
+  .card-storage-range {
+    font-size: rem(12);
+  }
+  .card-storage-left {
+    color: var(--grayish-blue);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    font-size: rem(12);
+    .bold-storage {
+      color: var(--very-dark-blue);
+      font-weight: var(--fw-bold);
+      font-size: 2.4rem;
+    }
+  }
+}

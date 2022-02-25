@@ -1,0 +1,106 @@
+@use "../abstracts/mixins" as *;
+.card {
+  background-color: var(--dark-blue);
+}
+
+.card-main {
+  padding: 2.5rem; //2.5rem
+  border-radius: 10px 100px 10px 10px;
+  margin-bottom: 1rem;
+  .card-links-container {
+    margin-top: 2.0625rem;
+    @include flex-row(left, stretch);
+    gap: 1rem;
+    .card-links {
+      background-color: var(--very-dark-blue);
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+      display: block;
+    }
+    .card-file {
+      padding: 0.6rem 0.87rem;
+      &::before {
+        content: url(../../images/icon-document.svg);
+      }
+    }
+    .card-folder {
+      @include flex-row(center, center);
+      &::before {
+        content: url(../../images/icon-folder.svg);
+      }
+    }
+    .card-upload {
+      @include flex-row(center, center);
+      &::before {
+        content: url(../../images/icon-upload.svg);
+      }
+    }
+  }
+}
+
+.card-data {
+  border-radius: 10px;
+  position: relative;
+  .card-storage-range {
+    @include flex-row(space-between, center);
+    margin-bottom: 1.2rem;
+  }
+  .card-storage-left {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 55%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0.9rem;
+    @include flex-row(center, center);
+    .bold-storage {
+      margin-right: 0.75rem;
+    }
+  }
+}
+
+.card-progress-container {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  margin: 1.4rem 0 0.5rem 0;
+  border-radius: 10px;
+  padding: 3px;
+  z-index: 1;
+  &::before {
+    content: "";
+    background: var(--progress-bar);
+    position: absolute;
+    left: 0;
+    height: 1.25rem;
+    width: 100%;
+    transform: translateY(-30%);
+    transition: 0.4s ease;
+    border-radius: 33px;
+    z-index: -1;
+  }
+  .progress {
+    background: linear-gradient(
+      to right,
+      hsl(6, 100%, 80%),
+      hsl(335, 100%, 65%)
+    );
+    height: 0.875rem;
+    width: 75%;
+    transform: translateY(-20%);
+    transition: 0.4s ease;
+    border-radius: 33px;
+    z-index: -1;
+    padding: 2px;
+    .circle {
+      transform: translateY(-5%);
+      background-color: #fff;
+      border-radius: 50%;
+      height: 11px;
+      width: 11px;
+      float: right;
+    }
+  }
+}
