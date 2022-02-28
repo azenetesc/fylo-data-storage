@@ -6,7 +6,6 @@
 .card-main {
   padding: 2.5rem; //2.5rem
   border-radius: 10px 100px 10px 10px;
-  margin-bottom: 1rem;
   .card-links-container {
     margin-top: 2.0625rem;
     @include flex-row(left, stretch);
@@ -41,6 +40,9 @@
 .card-data {
   border-radius: 10px;
   position: relative;
+  @include respond-md {
+    flex: 1;
+  }
   .card-storage-range {
     @include flex-row(space-between, center);
     margin-bottom: 1.2rem;
@@ -101,6 +103,28 @@
       height: 11px;
       width: 11px;
       float: right;
+    }
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  body {
+    background: url(../../images/bg-desktop.png) no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    background-color: var(--very-dark-blue);
+  }
+  .container {
+    max-width: 60%;
+    gap: 1.5rem;
+    @include flex-row(center, flex-end);
+    .card-main {
+      width: 40%;
+    }
+    .card-data {
+      .card-storage-left {
+        border: 1px red solid;
+      }
     }
   }
 }

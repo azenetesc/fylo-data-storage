@@ -11,3 +11,9 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+@mixin respond-md {
+  @media (min-width: 40rem) {
+    @content;
+  }
+}

@@ -29,8 +29,13 @@ body {
 }
 
 .container {
-  min-width: calc(100% - 50px);
+  width: 85%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: normal;
+  gap: 1rem;
 }
 
 .attribution {
@@ -82,7 +87,6 @@ body {
 .card-main {
   padding: 2.5rem;
   border-radius: 10px 100px 10px 10px;
-  margin-bottom: 1rem;
 }
 .card-main .card-links-container {
   margin-top: 2.0625rem;
@@ -126,6 +130,11 @@ body {
 .card-data {
   border-radius: 10px;
   position: relative;
+}
+@media (min-width: 40rem) {
+  .card-data {
+    flex: 1;
+  }
 }
 .card-data .card-storage-range {
   display: flex;
@@ -190,6 +199,30 @@ body {
   height: 11px;
   width: 11px;
   float: right;
+}
+
+@media screen and (min-width: 62rem) {
+  body {
+    background: url(../../images/bg-desktop.png) no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    background-color: var(--very-dark-blue);
+  }
+
+  .container {
+    max-width: 60%;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .container .card-main {
+    width: 40%;
+  }
+  .container .card-data .card-storage-left {
+    border: 1px red solid;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -16,8 +16,10 @@ body {
 }
 
 .container {
-  min-width: calc(100% - 50px);
+  width: 85%;
   margin: auto;
+  @include flex-column(center, normal);
+  gap: 1rem;
 }
 
 .attribution {
