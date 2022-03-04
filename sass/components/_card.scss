@@ -115,15 +115,35 @@
     background-color: var(--very-dark-blue);
   }
   .container {
-    max-width: 60%;
-    gap: 1.5rem;
+    max-width: 64%;
+    gap: 2rem;
     @include flex-row(center, flex-end);
+    .card {
+      box-shadow: 0px 40px 25px 0px rgba(0, 0, 0, 0.151);
+    }
     .card-main {
-      width: 40%;
+      width: 38%;
     }
     .card-data {
+      .card-storage-range {
+        margin-bottom: 0.8rem;
+      }
       .card-storage-left {
-        border: 1px red solid;
+        margin-right: 0;
+        top: 0;
+        right: 3rem;
+        transform: translateY(-60%);
+        width: 33%;
+        &:after {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: -1rem;
+          border: none;
+          border-top: 0rem solid transparent;
+          border-right: 1.5rem solid #fff;
+          border-bottom: 1.6rem solid transparent;
+        }
       }
     }
   }

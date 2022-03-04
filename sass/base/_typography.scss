@@ -35,3 +35,9 @@ body {
     }
   }
 }
+
+@media screen and (min-width: 62rem) {
+  .card-data {
+    text-align: left;
+  }
+}
