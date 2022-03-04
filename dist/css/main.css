@@ -106,6 +106,10 @@ body {
   padding: 0.5rem 0.75rem;
   border-radius: 8px;
   display: block;
+  transition: all 0.3s ease-in;
+}
+.card-main .card-links-container .card-links:hover {
+  background-color: rgba(50, 100, 238, 0.562);
 }
 .card-main .card-links-container .card-file {
   padding: 0.6rem 0.87rem;
